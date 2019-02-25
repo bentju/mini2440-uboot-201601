@@ -7,7 +7,7 @@
 
 # core
 ifndef CONFIG_SPL_BUILD
-obj-y += init/
+extra-$(CONFIG_S3C2440_NAND_BOOT) += init/board_init.o
 obj-y += main.o
 obj-y += exports.o
 obj-y += hash.o
@@ -80,6 +80,8 @@ obj-$(CONFIG_DATAFLASH_MMC_SELECT) += cmd_dataflash_mmc_mux.o
 obj-$(CONFIG_CMD_DATE) += cmd_date.o
 obj-$(CONFIG_CMD_DEMO) += cmd_demo.o
 obj-$(CONFIG_CMD_SOUND) += cmd_sound.o
+obj-$(CONFIG_CMD_BURN_IMG) += cmd_burn_img.o
+obj-$(CONFIG_CMD_MINI2440_WATCHDOG) +=cmd_mini2440_wd.o
 ifdef CONFIG_4xx
 obj-$(CONFIG_CMD_SETGETDCR) += cmd_dcr.o
 endif
