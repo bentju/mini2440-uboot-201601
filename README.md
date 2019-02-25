@@ -36,3 +36,5 @@ mini2440 uboot based on uboot_2016.01
             .size   = 1024 * 1024 * 1024,
         }
     };
+make mini2440_defconfig
+make
